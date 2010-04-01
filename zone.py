@@ -1,0 +1,2 @@
+class Zone(object):
+	pass

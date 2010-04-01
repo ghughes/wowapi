@@ -1,0 +1,125 @@
+universal = {
+# Found by me
+	'UNIT_NAME_BASE':					0x95C,
+	'UNIT_NAME_PTR':					0x5C,
+	'UNIT_DESC_PTR':					0x4,
+	'NODE_NAME_BASE':					0x408,
+	'NODE_NAME_PTR':					0x90,
+	'UNIT_TARGET':						0x1830,
+# Pocket Gnome - Offsets.h
+	'COMBO_POINT_VALUE':				0x0,
+	'COMBO_POINT_TARGET_UID':			0x4,
+	'TARGET_FOCUS':						0x00,
+	'TARGET_UNKNOWN1':					0x10,
+	'TARGET_LAST':						0x18,
+	'TARGET_CURRENT':					0x20,
+	'TARGET_INTERACT':					0x28,
+	'TARGET_MOUSEOVER':					0x30,
+	'BAR1_OFFSET':						0x0,
+	'BAR2_OFFSET':						0x30,
+	'BAR3_OFFSET':						0x60, # right bar 1
+	'BAR4_OFFSET':						0x90, # right bar 2
+	'BAR5_OFFSET':						0xC0, # bottom right
+	'BAR6_OFFSET':						0xF0, # bottom left
+	'BAR7_OFFSET':						0x120, # form1
+	'BAR8_OFFSET':						0x150, # form2
+	'BAR9_OFFSET':						0x180, # form3
+	'BAR10_OFFSET':						0x1B0, # unknown
+	'LOOT_QUANTITY':					0x8,
+	'LOOT_INDEX':						0x14,
+	'LOOT_NEXT':						0x20,
+	'CD_NEXT_ADDRESS':					0x4,
+	'CD_SPELLID':						0x8,
+	'CD_COOLDOWN':						0x20,
+	'CD_COOLDOWN2':						0x14,
+	'CD_STARTTIME':						0x1C,
+	'CD_GCD':							0x2C,
+# Pocket Gnome - Unit.h
+	'OBJECT_BASE_ID':					0x0,
+	'OBJECT_FIELDS_PTR':				0x4,
+	'OBJECT_FIELDS_END_PTR':			0x8,
+	'OBJECT_UNKNOWN1':					0xC,
+	'OBJECT_TYPE_ID':					0x10,
+	'OBJECT_GUID_LOW32':				0x14,
+	'OBJECT_STRUCT1_POINTER':			0x18,
+	'OBJECT_STRUCT2_POINTER':			0x1C,
+	'OBJECT_STRUCT5_POINTER':			0x24,
+	'OBJECT_GUID_ALL64':				0x28,
+	'OBJECT_STRUCT3_POINTER':			0x30, # prev
+	'OBJECT_STRUCT4_POINTER':			0x34, # next
+	'UNIT_XLOCATION':					0x790,
+	'UNIT_YLOCATION':					0x794,
+	'UNIT_ZLOCATION':					0x798,
+	'UNIT_FACING_HORIZONTAL':			0x79C,
+	'UNIT_FACING_VERTICAL':				0x7A0,
+	'UNIT_MOVEMENTFLAGS':				0x7C0,
+	'UNIT_RUNSPEED_CURRENT':			0x808,
+	'UNIT_RUNSPEED_WALK':				0x80C,
+	'UNIT_RUNSPEED_MAX':				0x810,
+	'UNIT_RUNSPEED_BACK':				0x814,
+	'UNIT_AIRSPEED_MAX':				0x820,
+	'UNIT_SPELL_TOCAST':				0xA4C,
+	'UNIT_SPELL_CASTING':				0xA5C,
+	'UNIT_SPELL_TARGETGUID_LOW':		0xA60,
+	'UNIT_SPELL_TARGETGUID_HIGH':		0xA64,
+	'UNIT_SPELL_TIMESTART':				0xA68,
+	'UNIT_SPELL_TIMEEND':				0xA6C,
+	'UNIT_SPELL_CHANNELING':			0xA70,
+	'UNIT_SPELL_CHANNELTIMESTART':		0xA74,
+	'UNIT_SPELL_CHANNELTIMEEND':		0xA78,
+	'UNIT_SELECTIONFLAGS':				0xA80, # (1 << 12) when unit is selected, (1 << 13) when it's focused
+	'UNIT_AURAS_VALIDCOUNT':			0xDB4,
+	'UNIT_AURAS_START':					0xC34,
+	'UNIT_AURAS_OVERFLOWVALIDCOUNT':	0xC38,
+	'UNIT_AURAS_OVERFLOWPTR1':			0xC3C,
+# Pocket Gnome - Player.h
+	'VISIBLEITEM_CREATORGUID':			0x0,
+    'VISIBLEITEM_ENTRYID':				0x8,
+    'VISIBLEITEM_ENCHANT':				0x10,
+    'VISIBLEITEM_SIZE':					0x40,
+	'PLAYER_CURRENTTIME':				0xAAC,
+# Pocket Gnome - AuraController.m
+	'AURA_GUID':						0x0,
+	'AURA_ENTRYID':						0x8,
+	'AURA_BYTES':						0xC,
+	'AURA_DURATION':					0x10,
+	'AURA_EXPIRATION':					0x14,
+}
+
+mac = {
+# These ones found by me
+ 	'LOGIN_STATE_STATIC':				0x1542100, # 'login', 'charselect', 'charcreate'
+ 	'TOON_SELECTED_STATIC':				0xBA94F4, # index of selected toon on char select screen
+	'TOON_COUNT_STATIC':				0x15AF9E4, # number of toons on char select screen
+	'WORLD_LOADING_STATIC':				0xB9EC04, # 0x1 if game world is loading OR fully loaded
+	'WORLD_LOADED_STATIC':				0xB9D94C, # >0x0 if game world is fully loaded
+	'PLAYER_GUID_STATIC':				0xB9E578, # uint64
+	'OBJECT_LIST_LL_PTR':				0x1255A6C, # pointer to object list
+	'PLAYER_NAMES_LL_PTR':				0x151C2C4, # pointer to linked list of player names	
+	'GUILD_NAMES_LL_PTR':				0x151C224, # pointer to linked list of guild names
+	'ITEM_CACHE_LL_PTR':				0x151C404, # pointer to linked list of items in the game's cache
+# Pocket Gnome - Offsets.h
+	'PLAYER_NAME_STATIC':				0x153FD48,
+	'SERVER_NAME_STATIC':				0x1540426,
+	'ACCOUNT_NAME_STATIC':				0xC34180,
+	'COMBO_POINTS_STATIC':				0xB9D8AC,
+	'COMBO_POINTS_TABLE_STATIC':		0xB9D8AC,
+	'TARGET_TABLE_STATIC':				0xB9D990,
+	'KNOWN_SPELLS_STATIC':				0x15955A0,
+	'KNOWN_SPELLS_TOP_RANK_STATIC':		0x15945A0, # possibly wrong?
+	'HOTBAR_BASE_STATIC':				0x1588500, # uint32[12] of spell IDs
+	'PLAYER_IN_BUILDING_STATIC':		0x1236080,
+	'LAST_SPELL_THAT_DIDNT_CAST_STATIC':	0x125EA54,
+	'CHAT_BOX_OPEN_STATIC':				0xC22B20,
+	'CHATLOG_START':					0x14C3EB8,
+	'CORPSE_STATIC_X':					0x1540B80,
+	'CORPSE_STATIC_Y':					0x1540B84,
+	'CORPSE_STATIC_Z':					0x1540B88,
+	'ITEM_IN_LOOT_WINDOW':				0x157E0E4,
+	'PLAYER_CURRENT_ZONE':				0xB980F8,
+	'CD_OBJ_LIST_STATIC':				0x125E940,
+	'CLICK_TO_MOVE':					0x12708FC,
+	'CLICK_TO_MOVE_ACTION':				0x12709D4,
+	'CTM_GUID':							0x12709F0,
+	'LAST_RED_ERROR_MESSAGE':			0x1540BE0,
+}

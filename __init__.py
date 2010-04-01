@@ -1,0 +1,1 @@
+from wowapi.wow import WoW
